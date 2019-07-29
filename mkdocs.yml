@@ -1,0 +1,66 @@
+site_name: 'The Hacking Trove'
+site_description: ''
+site_author: 'Alexandre ZANNI'
+site_url: 'https://noraj.gitlab.io/the-hacking-trove'
+docs_dir: 'docs'
+
+nav:
+  - Home: 'index.md'
+  - 'Cheat Sheets':
+    - 'Elevation of Privilege': 'Cheat Sheets/eop.md'
+    - Metasploit: 'Cheat Sheets/metasploit.md'
+    - msfvenom: 'Cheat Sheets/msfvenom.md'
+    - 'MS SQL Server': 'Cheat Sheets/mssql.md'
+    - Network: 'Cheat Sheets/network.md'
+    - 'OSCP PWK': 'Cheat Sheets/OSCP_PWK.md'
+    - 'Pivoting': 'Cheat Sheets/pivoting.md'
+    - Samba: 'Cheat Sheets/smb.md'
+  - 'Tools':
+    - BaRMIe: 'Tools/barmie.md'
+    - CMSmap: 'Tools/cmsmap.md'
+    - 'Dig / Drill': 'Tools/dig_drill.md'
+    - DNSenum: 'Tools/dnsenum.md'
+    - DNSRecon: 'Tools/dnsrecon.md'
+    - enum4linux: 'Tools/enum4linux.md'
+    - 'Extract windows hashes': 'Tools/extract_windows_hashes.md'
+  - Dev: 'dev.md'
+  - About: 'about.md'
+
+theme:
+  name: 'material'
+  language: 'en'
+  palette:
+    primary: 'green'
+    accent: 'light green'
+  logo: 'img/android-chrome-512x512.png'
+  favicon: 'img/favicon.ico'
+  feature:
+    tabs: false
+  highlightjs: true
+#  hljs_languages:
+#    - yaml
+#  hljs_style: 'github'
+
+extra:
+  manifest: 'site.webmanifest'
+
+markdown_extensions:
+    - toc:
+        permalink: true
+    - def_list
+    - admonition
+    - sane_lists
+    - codehilite:
+        linenums: true
+        guess_lang: false
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - pymdownx.magiclink
+    - pymdownx.tasklist:
+        custom_checkbox: true
+
+
+# Copyright
+copyright: "Copyright &copy; 2019 Alexandre ZANNI (noraj)"
+
