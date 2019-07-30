@@ -3,6 +3,8 @@ site_description: ''
 site_author: 'Alexandre ZANNI'
 site_url: 'https://noraj.gitlab.io/the-hacking-trove'
 docs_dir: 'docs'
+repo_name: 'noraj/the-hacking-trove'
+repo_url: 'https://github.com/noraj/the-hacking-trove'
 
 nav:
   - Home: 'index.md'
