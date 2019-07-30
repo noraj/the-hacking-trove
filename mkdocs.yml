@@ -1,5 +1,5 @@
 site_name: 'The Hacking Trove'
-site_description: ''
+site_description: 'The hacker technical cheat sheet'
 site_author: 'Alexandre ZANNI'
 site_url: 'https://noraj.gitlab.io/the-hacking-trove'
 docs_dir: 'docs'
