@@ -36,6 +36,11 @@ nav:
     - 'SNMP Brute': 'Tools/snmp-brute.md'
     - snmpbulkwalk: 'Tools/snmpbulkwalk.md'
     - 'snmpbw.pl': 'Tools/snmpbw.pl.md'
+    - sqsh: 'Tools/sqsh.md'
+    - tcpdump: 'Tools/tcpdump.md'
+    - theHarvester: 'Tools/theharvester.md'
+    - whois: 'Tools/whois.md'
+    - 'windows-exploit-suggester': 'Tools/windows-exploit-suggester.md'
   - Dev: 'dev.md'
   - About: 'about.md'
 
