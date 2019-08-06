@@ -17,6 +17,7 @@ nav:
     - 'OSCP PWK': 'Cheat Sheets/OSCP_PWK.md'
     - 'Pivoting': 'Cheat Sheets/pivoting.md'
     - Samba: 'Cheat Sheets/smb.md'
+    - SMTP: 'Cheat Sheets/SMTP.md'
   - 'Tools':
     - BaRMIe: 'Tools/barmie.md'
     - CMSmap: 'Tools/cmsmap.md'
