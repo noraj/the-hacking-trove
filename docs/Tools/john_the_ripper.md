@@ -41,6 +41,26 @@ Print cracked passwords:
 $ john --show unshadow.txt
 ```
 
+## Custom mutations rules
+
+Generate a dict based on a rule and then use it to crack
+
+```
+$ john --wordlist=/usr/share/wordlists/password/rockyou.txt --stdout --rules:norajCommon02 > dict.txt
+$ john hash.txt --format=raw-md5 --wordlist=./dict.txt
+```
+
+Use a mutation rule directly
+
+```
+$ john hash.txt --format=raw-md5 --wordlist=/usr/share/wordlists/password/rockyou.txt --rules=norajCommon02
+```
+
+References:
+
+- [Custom Credential Mutations](https://metasploit.help.rapid7.com/docs/custom-credential-mutations)
+- [Wordlist rules syntax](https://www.openwall.com/john/doc/RULES.shtml)
+
 ## Benchmark
 
 ```
