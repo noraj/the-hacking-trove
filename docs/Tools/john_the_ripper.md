@@ -66,3 +66,7 @@ References:
 ```
 $ john --test
 ```
+
+## Maximum password length
+
+- https://www.notsosecure.com/maximum-password-length-reached/
