@@ -3,30 +3,31 @@ tags: [eop]
 ---
 # Elevation of Privilege (EoP)
 
+Elevation of Privilege (**EoP**), is also know as Privilege Escalation (**privsec** or **PE**).
+
 **Tools**:
 
 - Linux:
-    - linux-exploit-suggester (bash > 4.0) `linux-exploit-suggester.sh` https://github.com/mzet-/linux-exploit-suggester
-    - linux-exploit-suggester2 (perl) `linux-exploit-suggester` https://github.com/jondonas/linux-exploit-suggester-2
-    - LinEnum (bash) `linenum` https://github.com/rebootuser/LinEnum
-    - linuxprivchecker.py (python) https://github.com/sleventyeleven/linuxprivchecker
+    - [linux-exploit-suggester](https://github.com/mzet-/linux-exploit-suggester) (bash > 4.0) `linux-exploit-suggester.sh`
+    - [linux-exploit-suggester2](https://github.com/jondonas/linux-exploit-suggester-2) (perl) `linux-exploit-suggester`
+    - [LinEnum](https://github.com/rebootuser/LinEnum) (bash) `linenum`
+    - [linuxprivchecker.py](https://github.com/sleventyeleven/linuxprivchecker) (python)
 - Windows:
-    - Windows-Exploit-Suggester https://github.com/GDSSecurity/Windows-Exploit-Suggester
-    - Watson: (win 10, srv 2016 & 2019 exploit suggester) https://github.com/rasta-mouse/Watson
-    - BeRoot: Windows Priv Esc Checker https://github.com/AlessandroZ/BeRoot
-    - Powerless: Windows privilege escalation (enumeration) script designed with OSCP labs (legacy Windows) in mind: https://github.com/M4ximuss/Powerless
-    - windowsprivchecker: https://github.com/Tib3rius/windowsprivchecker
-    - WindowsEnum: Privilege Escalation Enum (Powershell) https://github.com/absolomb/WindowsEnum
+    - [Windows-Exploit-Suggester](https://github.com/GDSSecurity/Windows-Exploit-Suggester)
+    - [Watson](https://github.com/rasta-mouse/Watson): (win 10, srv 2016 & 2019 exploit suggester)
+    - [BeRoot](https://github.com/AlessandroZ/BeRoot): Windows Priv Esc Checker
+    - [Powerless](https://github.com/M4ximuss/Powerless): Windows privilege escalation (enumeration) script designed with OSCP labs (legacy Windows) in mind
+    - [windowsprivchecker](https://github.com/Tib3rius/windowsprivchecker)
+    - [WindowsEnum](https://github.com/absolomb/WindowsEnum): Privilege Escalation Enum (Powershell)
 - Misc:
-    - Scripts and pre-compiled binaries for EoP: https://github.com/AusJock/Privilege-Escalation/
+    - [AusJock/Privilege-Escalation](https://github.com/AusJock/Privilege-Escalation/) Scripts and pre-compiled binaries for EoP
 
 **Resources**:
 
 - Linux:
-    - https://guif.re/linuxeop
-    - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md
-    - https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
+    - [Guifre - Linux elevation of privileges](https://guif.re/linuxeop)
+    - [PayloadsAllTheThings - Linux - Privilege Escalation](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md)
+    - [g0tmi1k - Basic Linux Privilege Escalation](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
 - Windows:
-    - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md
-    - https://guif.re/windowseop
-
+    - [PayloadsAllTheThings - Windows - Privilege Escalation](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md)
+    - [Guifre - Windows elevation of privileges](https://guif.re/windowseop)

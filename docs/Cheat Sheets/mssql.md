@@ -27,7 +27,7 @@ https://docs.microsoft.com/fr-fr/sql/database-engine/configure-windows/xp-cmdshe
 
 Then execute code:
 
-```
+```sql
 EXEC master..xp_cmdshell 'net user'; 
 ```
 
