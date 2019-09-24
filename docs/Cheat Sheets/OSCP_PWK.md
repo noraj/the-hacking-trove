@@ -18,3 +18,4 @@ Exam:
 - [Offensive Security FAQ - Proctored Exams](https://www.offensive-security.com/faq/#exam-proc)
 - [System requirements - ConnectWise](https://docs.connectwise.com/ConnectWise_Control_Documentation/Get_started/System_requirements)
 - [Offensive Security Proctoring FAQ](https://support.offensive-security.com/proctoring-faq/)
+- [Proctoring Tool Student Manual](https://support.offensive-security.com/proctoring-tool-student-manual/)
