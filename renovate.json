@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "assignees": [
+    "noraj"
+  ],
+  "enabledManagers": [
+    "gitlabci"
+  ]
+}
