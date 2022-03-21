@@ -1,14 +1,13 @@
-image: python:alpine
+image: node:lts-buster # https://hub.docker.com/_/node
 
 before_script:
-  - pip install mkdocs
-  # Add your custom theme if not inside a theme_dir
-  # (https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
-  - pip install mkdocs-material pymdown-extensions
+  - node --version
+  - npm --version
+  - npm install
 
 pages:
   script:
-  - mkdocs build
+  - npm run build
   - mv site public
   artifacts:
     paths:

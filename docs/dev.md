@@ -1,19 +1,23 @@
+---
+icon: git-branch
+---
 # Dev
 
-Install on ArchLinux:
+Install steps:
 
 ```
-$ pikaur -S mkdocs mkdocs-material pymdown-extensions
-```
-
-Serve at `http://127.0.0.1:8000`:
-
-```
-$ mkdocs serve
+$ git clone https://github.com/noraj/the-hacking-trove/ thtt && cd thtt
+$ npm install
 ```
 
 Build to `site/`:
 
 ```
-$ mkdocs build
+$ npm run build
+```
+
+Serve at `http://localhost:5000/`:
+
+```
+$ npm run run
 ```

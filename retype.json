@@ -1,0 +1,51 @@
+{
+  "input": "docs",
+  "output": "site",
+  "url": "http://trove.raw.pm/",
+  "branding": {
+    "title": "The Hacking Tool Trove",
+    "label": "Docs",
+    "logo": "img/rawsec-logo-dark.svg",
+    "logoDark": "img/rawsec-logo.svg",
+    "colors": {
+      "label": {
+        "text": "#FFFFFF",
+        "background": "#ff5050"
+      }
+    }
+  },
+  "links": [
+    {
+      "text": "Home",
+      "link": "http://trove.raw.pm/"
+    },
+    {
+      "text": "Source",
+      "link": "https://github.com/noraj/the-hacking-trove"
+    },
+    {
+      "text": "Mirror",
+      "link": "https://gitlab.com/rawsec/the-hacking-trove"
+    }
+  ],
+  "footer": {
+    "copyright": "&copy; Copyright {{ year }} [Alexandre ZANNI](https://pwn.by/noraj/)"
+  },
+  "edit": {
+    "repo": "https://github.com/noraj/the-hacking-trove",
+    "base": "docs",
+    "branch": "master"
+  },
+  "favicon": "img/favicon.ico",
+  "meta": {
+    "title": " | THTT"
+  },
+  "markdown": {
+    "lineBreaks": "soft"
+  },
+  "snippets": {
+    "lineNumbers": [
+      "*"
+    ]
+  }
+}
