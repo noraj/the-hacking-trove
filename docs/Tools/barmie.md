@@ -3,12 +3,13 @@ tags: [java,rmi]
 ---
 # BaRMIe
 
-## References
-
-Java RMI enumeration and attack tool
-
-- https://github.com/NickstaDB/BaRMIe
-- https://inventory.rawsec.ml/tools.html#BaRMIe
+=== Info
+- **Description**: Java RMI enumeration and attack tool
+- Version tested: v1.01
+- Review date: 30/07/2019
+- [Source](https://github.com/NickstaDB/BaRMIe)
+- [Rawsec Inventory](https://inventory.rawsec.ml/tools.html#BaRMIe)
+===
 
 ## Example of execution
 

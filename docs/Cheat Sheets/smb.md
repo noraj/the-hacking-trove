@@ -5,14 +5,14 @@ tags: [smb,samba]
 
 ## Windows version mapping
 
-- SMB1 – Windows 2000, XP and Windows 2003.
-- SMB2 – Windows Vista SP1 and Windows 2008
+- SMB1.0 – Windows 2000, XP and Windows 2003
+- SMB2.0 – Windows Vista SP1 and Windows 2008
 - SMB2.1 – Windows 7 and Windows 2008 R2
-- SMB3 – Windows 8 and Windows 2012.
+- SMB3.0 – Windows 8 and Windows 2012
 
 ## SMB NetBIOS
 
-Listen on  TCP ports **139** and **445**.
+Listen on TCP ports **139** and **445**.
 
 Get NetBIOS info: (other than with enum4linux).
 
