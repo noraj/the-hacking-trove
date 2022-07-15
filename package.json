@@ -4,6 +4,6 @@
     "run": "./node_modules/retypeapp-linux-x64/bin/retype run"
   },
   "dependencies": {
-    "retypeapp-linux-x64": "^2.3.0"
+    "retypeapp-linux-x64": "^2.4.0"
   }
 }
