@@ -10,7 +10,7 @@ Windows Samba enumeration tool.
 `enum4linux` is a perl wrapper around `smbclient`, `rpcclient`, net and `nmblookup`.
 
 - https://github.com/portcullislabs/enum4linux
-- https://inventory.rawsec.ml/tools.html#enum4linux
+- https://inventory.raw.pm/tools.html#enum4linux
 
 ## Example of execution
 

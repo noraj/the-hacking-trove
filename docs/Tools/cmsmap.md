@@ -8,7 +8,7 @@ tags: [cms,web]
 WordPress, Joomla, Drupal, Moodle CMS security scanner.
 
 - https://github.com/Dionach/CMSmap
-- https://inventory.rawsec.ml/tools.html#CMSmap
+- https://inventory.raw.pm/tools.html#CMSmap
 
 ## Example of execution
 

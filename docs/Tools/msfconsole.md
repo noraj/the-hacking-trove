@@ -8,7 +8,7 @@ tags: [shell,snmp]
 `msfconsole` is the command line (CLI) interpreter of metasploit framework (msf).
 
 - Basic: https://www.offensive-security.com/metasploit-unleashed/msfconsole/
-- https://inventory.rawsec.ml/tools.html#Metasploit
+- https://inventory.raw.pm/tools.html#Metasploit
 
 ## Handler
 

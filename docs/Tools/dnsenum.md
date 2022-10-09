@@ -8,7 +8,7 @@ tags: [osint,dns]
 DNS reconnaissance tool: AXFR, DNS records enumeration, subdomain bruteforce, range reverse lookup.
 
 - https://github.com/fwaeytens/dnsenum
-- https://inventory.rawsec.ml/tools.html#dnsenum
+- https://inventory.raw.pm/tools.html#dnsenum
 
 ## Example of execution
 

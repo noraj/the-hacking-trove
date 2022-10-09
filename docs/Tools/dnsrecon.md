@@ -8,7 +8,7 @@ tags: [osint,dns]
 DNS reconnaissance tool: AXFR, DNS records enumeration, TLD expansion, wildcard resolution, subdomain bruteforce, PTR record lookup, check for cached records.
 
 - https://github.com/darkoperator/dnsrecon
-- https://inventory.rawsec.ml/tools.html#DNSRecon
+- https://inventory.raw.pm/tools.html#DNSRecon
 
 ## Example of execution
 

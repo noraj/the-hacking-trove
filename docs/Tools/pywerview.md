@@ -8,7 +8,7 @@ tags: [python,ad,ldap]
 - Version tested: v0.4.0
 - Review date: 13/05/2022
 - [Source](https://github.com/the-useless-one/pywerview)
-- [Rawsec Inventory](https://inventory.rawsec.ml/tools.html#pywerview)
+- [Rawsec Inventory](https://inventory.raw.pm/tools.html#pywerview)
 ===
 
 ## Example of execution

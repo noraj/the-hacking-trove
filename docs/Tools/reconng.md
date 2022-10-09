@@ -8,7 +8,7 @@ tags: [osint]
 Web-based reconnaissance tool.
 
 - https://bitbucket.org/LaNMaSteR53/recon-ng/
-- https://inventory.rawsec.ml/tools.html#Recon-ng
+- https://inventory.raw.pm/tools.html#Recon-ng
 
 ## Examples of execution
 

@@ -1,7 +1,8 @@
 {
   "scripts": {
     "build": "./node_modules/retypeapp-linux-x64/bin/retype build",
-    "run": "./node_modules/retypeapp-linux-x64/bin/retype run"
+    "run": "./node_modules/retypeapp-linux-x64/bin/retype run",
+    "watch": "./node_modules/retypeapp-linux-x64/bin/retype watch"
   },
   "dependencies": {
     "retypeapp-linux-x64": "^2.4.0"

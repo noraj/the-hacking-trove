@@ -8,7 +8,7 @@ tags: [osint]
 Multi-purpose information gathering tool: emails, names, subdomains, IPs, URLs.
 
 - https://github.com/laramies/theHarvester
-- https://inventory.rawsec.ml/tools.html#theHarvester
+- https://inventory.raw.pm/tools.html#theHarvester
 
 ## Example of command and options
 

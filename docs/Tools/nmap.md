@@ -8,9 +8,9 @@ tags: [network,scanner]
 - Nmap: Tool for network discovery and security auditing: https://nmap.org/
 - NMapGUI: Advanced GUI for Nmap https://github.com/danicuestasuarez/NMapGUI
 - Zenmap: Nmap GUI https://nmap.org/zenmap/
-- https://inventory.rawsec.ml/tools.html#Nmap
-- https://inventory.rawsec.ml/tools.html#NMapGUI
-- https://inventory.rawsec.ml/tools.html#Zenmap
+- https://inventory.raw.pm/tools.html#Nmap
+- https://inventory.raw.pm/tools.html#NMapGUI
+- https://inventory.raw.pm/tools.html#Zenmap
 
 ## Examples of commands
 

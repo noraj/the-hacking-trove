@@ -9,8 +9,8 @@ Password cracking tool
 
 - John The Ripper: http://www.openwall.com/john/
 - John The Ripper, Jumbo version: community-enhanced version of John The Ripper - http://www.openwall.com/john/
-- https://inventory.rawsec.ml/tools.html#John%20The%20Ripper
-- https://inventory.rawsec.ml/tools.html#John%20the%20Ripper,%20Jumbo%20version
+- https://inventory.raw.pm/tools.html#John%20The%20Ripper
+- https://inventory.raw.pm/tools.html#John%20the%20Ripper,%20Jumbo%20version
 
 ## Unshadow
 
