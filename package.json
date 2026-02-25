@@ -5,6 +5,6 @@
     "watch": "./node_modules/retypeapp-linux-x64/bin/retype watch"
   },
   "dependencies": {
-    "retypeapp-linux-x64": "^4.0.0"
+    "retypeapp-linux-x64": "^4.0.1"
   }
 }
